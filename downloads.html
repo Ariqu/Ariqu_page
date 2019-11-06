@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="EmployeeApp">
+<head>
+	<title>ARIQU OFFICIAL PAGE!</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Orderring People</title>     
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body ng-controller="empCtrl" style="background-color: #16072f;">
+<div id="fs" class="gradient-border"></div>
+
+	 <script type="text/javascript">
+        var employeeApp = angular.module("EmployeeApp",[]);
+        employeeApp.controller("empCtrl",function($scope){
+            $scope.employees = [
+                {
+                    "title" : "Ariqu - Hell (Original Mix)",
+                    "Url" : "http://lnnk.in/@Ariqu_hell",
+                    
+                },
+                {
+                     "title" : "Tiwoan & Lance - AH IH OH (Ariqu Bootleg)",
+                    "Url" : "https://krakenfiles.com/view/54d2d235e3/file.html?fbclid=IwAR0uJKjaEMKRhGSI3kOoBpyr6CS66k-f03-qOWBHLBxYEGJyTyxBy6hf_rw",
+                },
+                {
+                     "title" : "Ariqu & Winamp - Gucci (Original Mix)",
+                    "Url" : "https://krakenfiles.com/view/1136396e6a/file.html?fbclid=IwAR0s8r-VY4LEdpw8IgmFwMQXm1FUjKecGq83mkBw-GgX9TLdFLqArnkor80",
+                },
+                {
+                     "title" : "Alex Peace vs. Szymus - From Inside The Speaker (Ariqu Bootleg)",
+                    "Url" : "https://krakenfiles.com/view/f6997b6284/file.html",
+                },
+                {
+                     "title" : "Ariqu & Dj Przemooo - Evil Pikachu (Original Mix)",
+                    "Url" : "https://krakenfiles.com/view/39c3b520ad/file.html",
+                },
+                {
+                     "title" : "Ariqu - Paxi Fixi (Original '2V' Mix)",
+                    "Url" : "https://krakenfiles.com/view/77ece71022/file.html",
+                },
+                {
+                     "title" : "Resource & Potatoheadz ft. Reflex - 18 MNE UZHE (Ariqu Remix 2K19)",
+                    "Url" : "https://krakenfiles.com/view/06b9f407d7/file.html",
+                },
+                {
+                	"title" : "Banger - Presets Gucci (Ariqu Bootleg)",
+                	"Url" : "https://krakenfiles.com/view/aa195fb8fd/file.html",
+                    
+                }, 
+                {
+                	"title" : "Furio & MRG - Is Change (Ariqu Bootleg 2k19)",
+                	"Url" :  "https://krakenfiles.com/view/eb3f0e21f5/file.html",
+                    
+                },  
+                {
+                	"title" : "Ariqu - Time On My Side (Original Mix)",
+                	"Url" : "https://www109.zippyshare.com/v/1JutPnVW/file.html",
+                    
+                },
+                {
+                	"title" : "Matson & Conrado - Bouncing Bass (Ariqu ReFresh 2K19)",
+                	"Url" : "https://krakenfiles.com/view/2758d5a7ef/file.html",
+
+                },
+                {
+
+                	"title_przedpremiera" : "Ariqu & DJ Przemooo - I'M Rich (Original 'VIP Mix) [NIEDOSTEPNE]",
+                	"Url" : "niemajeszczexd"
+            }
+            ];
+            $scope.orderProp="title";           
+        });
+    </script>   
+
+
+
+	<div  class="container">
+		<div  id="odstep" class="d-flex justify-content-center">
+		<input type="text" ng-model="query" placeholder="wyszukaj" name=""></div>
+		
+	
+		<div id="table">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">LINK</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="emp in employees | filter:query">
+      <td>{{emp.title}} <span style=" color: gold; font-size: 30px; background-color: black;">{{emp.title_przedpremiera}}</span></td>
+      <td><a  class="fa fa-download" ng-href="{{emp.Url}}">Pobierz</a></td>
+    </tr>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+	</div>
+
+
+
+</body>
+</html>
